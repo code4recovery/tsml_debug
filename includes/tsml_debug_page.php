@@ -152,7 +152,7 @@ function tsml_debug_page()
                   <?php
                   // Get phpinfo() HTML
                   ob_start();
-                  phpinfo(INFO_GENERAL);
+                  phpinfo();
                   $phpInfoHtml = ob_get_clean();
                   $startPos = strpos($phpInfoHtml, '<body>') + 6;
                   $endPos = strpos($phpInfoHtml, '</body>');
