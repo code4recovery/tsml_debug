@@ -107,6 +107,26 @@ function tsml_debug_page()
           <div class="postbox">
             <div class="inside">
               <details>
+                <summary><strong><?php _e('Add Cached Address', '12-step-meeting-list') ?></strong></summary>
+                <section>
+                  This needs to be written, it should display a form, suitable to add an address to the cache
+                </section>
+              </details>
+            </div>
+          </div>
+          <div class="postbox">
+            <div class="inside">
+              <details>
+                <summary><strong><?php _e('Serialized Cached Addresses', '12-step-meeting-list') ?></strong></summary>
+                <section>
+                  <?php echo serialize($addresses); ?>
+                </section>
+              </details>
+            </div>
+          </div>
+          <div class="postbox">
+            <div class="inside">
+              <details>
                 <summary><strong><?php printf(__('See Static Addresses (%d)', '12-step-meeting-list'), count($tsml_google_overrides)) ?></strong></summary>
                 <section>
                   <?php ksort($tsml_google_overrides);
@@ -120,26 +140,6 @@ function tsml_debug_page()
                     printf('</ul></p>' . PHP_EOL . PHP_EOL);
                   }
                   ?>
-                </section>
-              </details>
-            </div>
-          </div>
-          <div class="postbox">
-            <div class="inside">
-              <details>
-                <summary><strong><?php _e('Add Cached Address', '12-step-meeting-list') ?></strong></summary>
-                <section>
-                  <p>Good stuff goes here!</p>
-                </section>
-              </details>
-            </div>
-          </div>
-          <div class="postbox">
-            <div class="inside">
-              <details>
-                <summary><strong><?php _e('Serialized Addresses', '12-step-meeting-list') ?></strong></summary>
-                <section>
-                  <?php echo serialize($addresses); ?>
                 </section>
               </details>
             </div>
