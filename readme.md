@@ -24,4 +24,4 @@ There is more work to be done:
 - Add/update help text on the debug page
 - Add additional tabs with useful information/features
 
-And of course, additional testing, both around security,
+And of course, additional testing, both around security, and how it works on different sites with different themes
