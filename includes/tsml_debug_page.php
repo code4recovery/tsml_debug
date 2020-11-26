@@ -14,9 +14,8 @@ function tsml_debug_page()
   if (!empty($_POST['tsml_debug']) && isset($_POST['tsml_nonce']) && wp_verify_nonce($_POST['tsml_nonce'], $tsml_nonce)) {
     if ($_POST['tsml_debug'] == 'public') {
       $tsml_debug['status'] = 'public';
-      $tsml_debug['expires'] = time() + (7 * 24 * 60 * 60);
-      // Tmp
-      $tsml_debug['expires'] = time() + (600);
+      $tsml_debug['expires'] = time() + (7 * 24 * 60 * 60); // 7 days
+      //$tsml_debug['expires'] = time() + (600); // 10 minutes, for testing
       $tsml_debug['key'] = md5(uniqid(time(), true));
     } else {
       $tsml_debug['status'] = 'admin_only';

@@ -46,7 +46,7 @@ if (defined('TSML_VERSION')) {
         $page_key = empty($input['key']) ? '' : $input['key'];
         $now = time();
 
-        if ('public' == $tsml_debug['status'] && $now <= $tsml_debug['expires'] && ($page_key == $tsml_debug['key'] || is_admin())) {
+        if ('public' == $tsml_debug['status'] && $now <= $tsml_debug['expires'] && ($page_key == $tsml_debug['key'] || 'tsml_debug' == $input['page'])) {
             return true;
         }
 
