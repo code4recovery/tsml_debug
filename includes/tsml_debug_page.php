@@ -94,6 +94,9 @@ function tsml_debug_page()
                     printf('<li>Address: %s</li>' . PHP_EOL, $value['formatted_address']);
                     printf('<li>Latitude: %s</li>' . PHP_EOL, $value['latitude']);
                     printf('<li>Longitude: %s</li>' . PHP_EOL, $value['longitude']);
+                    if (!empty($value['approximate'])) {
+                      printf('<li>Approximate: %s</li>' . PHP_EOL, $value['approximate']);
+                    }
                     printf('<li>City: %s</li>' . PHP_EOL, $value['city']);
                     printf('</ul></p>' . PHP_EOL . PHP_EOL);
                   }
@@ -135,6 +138,9 @@ function tsml_debug_page()
                     printf('<li>Address: %s</li>' . PHP_EOL, $value['formatted_address']);
                     printf('<li>Latitude: %s</li>' . PHP_EOL, $value['latitude']);
                     printf('<li>Longitude: %s</li>' . PHP_EOL, $value['longitude']);
+                    if (!empty($value['approximate'])) {
+                      printf('<li>Approximate: %s</li>' . PHP_EOL, $value['approximate']);
+                    }
                     printf('<li>City: %s</li>' . PHP_EOL, $value['city']);
                     printf('</ul></p>' . PHP_EOL . PHP_EOL);
                   }
